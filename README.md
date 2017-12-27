@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://hamed-ehtesham.github.io/pretty-checkbox-vue/">
-    <img src="https://github.com/bootstrap-vue/bootstrap-vue/raw/master/banner.png" width="300px">
+    <img src="https://raw.githubusercontent.com/hamed-ehtesham/pretty-checkbox-vue/master/banner.png" width="300px">
 </a>
 
 <br>
