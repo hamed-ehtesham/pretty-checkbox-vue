@@ -1,0 +1,11 @@
+{
+  "presets": ["env", "stage-2"],
+  "plugins": [
+    "transform-object-rest-spread",
+    ["transform-runtime", {
+      "polyfill": false,
+      "helpers": false
+    }]
+  ],
+  "comments": false
+}
