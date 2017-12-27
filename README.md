@@ -9,7 +9,7 @@ Quickly integrate <a href="https://lokesh-coder.github.io/pretty-checkbox/">pret
 <br>
 
 <a href="https://lokesh-coder.github.io/pretty-checkbox/">
-    <img alt="" src="https://img.shields.io/badge/%20pretty--checkbox-v3.0.3-brightgreen.svg?style=flat-square&colorA=8033b0&colorB=75b7dd">
+    <img alt="" src="https://img.shields.io/badge/%20pretty--checkbox-3.x-green.svg?style=flat-square&colorA=8033b0&colorB=75b7dd">
 </a>
 <a href="https://vuejs.org">
     <img alt="" src="https://img.shields.io/badge/vue.js-2.x-green.svg?style=flat-square&colorA=35495e&colorB=41b883">
@@ -20,7 +20,7 @@ Quickly integrate <a href="https://lokesh-coder.github.io/pretty-checkbox/">pret
 <a href="https://github.com/hamed-ehtesham/pretty-checkbox-vue/releases">
     <img src="https://img.shields.io/github/release/hamed-ehtesham/pretty-checkbox-vue.svg?style=flat-square&colorB=75b7dd" alt="Github Release">
 </a>
-<a href="">
+<a href="https://github.com/hamed-ehtesham/pretty-checkbox-vue/blob/master/LICENSE">
     <img src="https://img.shields.io/npm/l/pretty-checkbox.svg?style=flat-square&colorB=41b883" alt="Licence">
 </a>
 <a href="https://www.npmjs.com/package/pretty-checkbox-vue">
@@ -69,4 +69,4 @@ Once installed, it can be used in a template as simply as:
 If you have discovered a 🐜 or have a feature suggestion, feel free to create an [issue](https://github.com/hamed-ehtesham/pretty-checkbox-vue/issues) on Github.
 
 # License
-Released under The MIT [License](./LICENSE). Copyright (c) hamed-ehtesham.
+Released under The MIT [License](https://github.com/hamed-ehtesham/pretty-checkbox-vue/blob/master/LICENSE). Copyright (c) hamed-ehtesham.
