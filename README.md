@@ -12,7 +12,7 @@ Quickly integrate <a href="https://lokesh-coder.github.io/pretty-checkbox/">pret
     <img alt="" src="https://img.shields.io/badge/%20pretty--checkbox-3.x-green.svg?style=flat-square&colorA=8033b0&colorB=75b7dd">
 </a>
 <a href="https://vuejs.org">
-    <img alt="" src="https://img.shields.io/badge/vue.js-2.x-green.svg?style=flat-square&colorA=35495e&colorB=41b883">
+    <img alt="" src="https://img.shields.io/badge/vue.js-^2.2.0-green.svg?style=flat-square&colorA=35495e&colorB=41b883">
 </a>
 
 <br>
@@ -31,6 +31,13 @@ Quickly integrate <a href="https://lokesh-coder.github.io/pretty-checkbox/">pret
 </a>
 
 </p>
+
+<div class="highlight highlight-source-shell">
+<pre>
+<div align="center"><strong>Demo and documentation</strong></div>
+<div align="center"><a align="center" href="https://hamed-ehtesham.github.io/pretty-checkbox-vue/">https://hamed-ehtesham.github.io/pretty-checkbox-vue/</a></div>
+</pre>
+</div>
 
 ## Installation
 
@@ -55,7 +62,19 @@ Include the script file, then install the component with `Vue.use(PrettyCheckbox
 ```js
 import PrettyCheckbox from 'pretty-checkbox-vue';
 
-Vue.component('p-checkbox', PrettyCheckbox);
+Vue.use(PrettyCheckbox);
+```
+
+Or
+
+```js
+import PrettyInput from 'pretty-checkbox-vue/input';
+import PrettyCheck from 'pretty-checkbox-vue/check';
+import PrettyRadio from 'pretty-checkbox-vue/radio';
+
+Vue.component('p-input', PrettyInput);
+Vue.component('p-check', PrettyCheck);
+Vue.component('p-radio', PrettyRadio);
 ```
 
 ## Usage
@@ -63,7 +82,13 @@ Vue.component('p-checkbox', PrettyCheckbox);
 Once installed, it can be used in a template as simply as:
 
 ```html
-<p-checkbox name="remember" class="p-default" button-variant="success" v-model="remember">remember</p-checkbox>
+<p-check name="check" color="success" v-model="check">check</p-check>
+<p-radio name="radio" color="info" v-model="radio">radio</p-radio>
+
+<!-- Or it can be used just like input -->
+
+<p-input type="checkbox" name="check" color="success" v-model="check">check</p-input>
+<p-input type="radio" name="radio" color="info" v-model="radio">radio</p-input>
 ```
 
 If you have discovered a 🐜 or have a feature suggestion, feel free to create an [issue](https://github.com/hamed-ehtesham/pretty-checkbox-vue/issues) on Github.

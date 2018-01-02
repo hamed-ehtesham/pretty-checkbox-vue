@@ -69,3 +69,7 @@ out
 gen
 
 dist/
+
+input.js
+check.js
+radio.js

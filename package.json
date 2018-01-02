@@ -16,7 +16,7 @@
     "Checkbox",
     "Radio"
   ],
-  "main": "src/PrettyCheckbox.vue",
+  "main": "dist/pretty-checkbox-vue.js",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./webpack.config.js"
   },
@@ -26,7 +26,10 @@
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "input.js",
+    "check.js",
+    "radio.js"
   ],
   "author": "Hamed Ehtesham",
   "license": "MIT",
@@ -35,7 +38,7 @@
   },
   "homepage": "https://hamed-ehtesham.github.io/pretty-checkbox-vue/",
   "peerDependencies": {
-    "vue": "^2.4.2"
+    "vue": "^2.2.0"
   },
   "dependencies": {
     "pretty-checkbox": "^3.0.3"
@@ -46,7 +49,6 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.9.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-2": "^6.11.0",
     "babel-runtime": "^6.9.2",
     "css-loader": "^0.28.7",

@@ -48,11 +48,41 @@ module.exports = [
         }
     }),
     merge(config, {
-        entry: path.resolve(__dirname + '/src/PrettyCheckbox.vue'),
+        entry: path.resolve(__dirname + '/src/plugin.js'),
         output: {
             filename: 'pretty-checkbox-vue.js',
             libraryTarget: 'umd',
             library: 'pretty-checkbox-vue',
+            umdNamedDefine: true
+        }
+    }),
+    merge(config, {
+        entry: path.resolve(__dirname + '/src/PrettyInput.vue'),
+        output: {
+            path: path.resolve(__dirname + '/'),
+            filename: 'input.js',
+            libraryTarget: 'umd',
+            library: 'PrettyInput',
+            umdNamedDefine: true
+        }
+    }),
+    merge(config, {
+        entry: path.resolve(__dirname + '/src/PrettyCheckbox.vue'),
+        output: {
+            path: path.resolve(__dirname + '/'),
+            filename: 'check.js',
+            libraryTarget: 'umd',
+            library: 'PrettyCheck',
+            umdNamedDefine: true
+        }
+    }),
+    merge(config, {
+        entry: path.resolve(__dirname + '/src/PrettyRadio.vue'),
+        output: {
+            path: path.resolve(__dirname + '/'),
+            filename: 'radio.js',
+            libraryTarget: 'umd',
+            library: 'PrettyRadio',
             umdNamedDefine: true
         }
     })

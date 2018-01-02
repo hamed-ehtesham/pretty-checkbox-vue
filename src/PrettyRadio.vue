@@ -1,10 +1,10 @@
 <script>
     let prettyInput = require('./PrettyInput.vue');
 
-    let prettyCheckbox = {
-        name: "pretty-checkbox",
+    let prettyRadio = {
+        name: "pretty-radio",
 
-        input_type: 'checkbox',
+        input_type: 'radio',
 
         model: prettyInput.model,
         props: prettyInput.props,
@@ -17,5 +17,5 @@
         render: prettyInput.render,
     };
 
-    export default prettyCheckbox;
+    export default prettyRadio;
 </script>
