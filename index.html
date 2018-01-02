@@ -97,7 +97,10 @@
                     <div class="card-body p-0"><pre>
 	<code class="language-html">
     &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css&quot;&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/pretty-checkbox-vue@0.0.3/dist/pretty-checkbox-vue.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/pretty-checkbox-vue@1.0.0/dist/pretty-checkbox-vue.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      Vue.use(PrettyCheckbox);
+    &lt;/script&gt;
 </code>
 </pre>
                     </div>
@@ -120,7 +123,22 @@
 	<code class="language-javascript">
     import PrettyCheckbox from 'pretty-checkbox-vue';
 
-    Vue.component('p-check', PrettyCheckbox);
+    Vue.use(PrettyCheckbox);
+</code>
+</pre>
+                    </div>
+                </div>
+                <p>or you can use it this way</p>
+                <div class="card mb-3">
+                    <div class="card-body p-0"><pre>
+	<code class="language-javascript">
+    import PrettyInput from 'pretty-checkbox-vue/input';
+    import PrettyCheck from 'pretty-checkbox-vue/check';
+    import PrettyRadio from 'pretty-checkbox-vue/radio';
+
+    Vue.component('p-input', PrettyInput);
+    Vue.component('p-check', PrettyCheck);
+    Vue.component('p-radio', PrettyRadio);
 </code>
 </pre>
                     </div>
