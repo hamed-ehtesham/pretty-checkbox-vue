@@ -91,6 +91,39 @@ Once installed, it can be used in a template as simply as:
 <p-input type="radio" name="radio" color="info" v-model="radio">radio</p-input>
 ```
 
+
+### Properties
+Property | Type | Default Value
+------------ | ------------- | -------------
+type | String | checkbox (checkbox & input) or radio (radio) 
+name | String | 
+value | String |  
+true-value | Boolean or String | true
+false-value | Boolean or String | false
+checked | Boolean | false
+disabled | Boolean | false
+required | Boolean | false
+indeterminate | Boolean | false
+color | String | 
+off-color | String | 
+hover-color | String | 
+indeterminate-color | String | 
+toggle | Boolean | false
+hover | Boolean | false
+focus | Boolean | false
+
+### Slots
+Name | Purpose
+------------ | -------------
+default (no name) | include **label** in _**default**_ mode or for **"on"** state in _**toggle**_ mode
+extra | include **icon** or **svg** or **image** in _**default**_ mode or for **"on"** state in _**toggle**_ mode
+off-label | include **label** for **"off"** state in _**toggle**_ mode
+off-extra | include **icon** or **svg** or **image** for **"off"** state in _**toggle**_ mode
+hover-label | include **label** in _**hover**_ state
+hover-extra | include **icon** or **svg** or **image** in _**hover**_ state
+indeterminate-label | include **label** in _**indeterminate**_ state
+indeterminate-extra | include **icon** or **svg** or **image** in _**indeterminate**_ state
+
 If you have discovered a 🐜 or have a feature suggestion, feel free to create an [issue](https://github.com/hamed-ehtesham/pretty-checkbox-vue/issues) on Github.
 
 # License
