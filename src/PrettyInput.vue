@@ -55,6 +55,7 @@
 
         data() {
             return {
+                m_checked: undefined,
                 default_mode: false,
             }
         },
@@ -85,7 +86,11 @@
                     return typeof this.modelValue === 'string' ? true : !!this.modelValue;
                 }
 
-                return typeof this.checked === 'string' ? true : !!this.checked;
+                // this.modelValue === undefined
+                if(this.m_checked === undefined)
+                    return this.m_checked = typeof this.checked === 'string' ? true : !!this.checked;
+                else
+                    return this.m_checked;
             },
             _disabled() {
                 return typeof this.disabled === 'string' ? true : !!this.disabled;
@@ -161,6 +166,9 @@
         },
 
         watch: {
+            checked(v) {
+                this.m_checked = v;
+            },
             indeterminate(v) {
                 this.$refs.input.indeterminate = v;
             },
@@ -181,6 +189,8 @@
                 this.$emit('update:indeterminate', false);
 
                 let isChecked = event.target.checked;
+
+                this.m_checked = isChecked;
 
                 if (this.modelValue instanceof Array) {
                     let newValue = [...this.modelValue];
