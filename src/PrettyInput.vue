@@ -178,8 +178,8 @@
                     return;
                 }
 
-                this.indeterminate = false;
-                this.$emit('update:indeterminate', this.indeterminate);
+                this.$emit('update:indeterminate', false);
+
                 let isChecked = event.target.checked;
 
                 if (this.modelValue instanceof Array) {
