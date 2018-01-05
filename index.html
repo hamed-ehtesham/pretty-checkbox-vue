@@ -604,8 +604,14 @@
     &lt;/p-check&gt;
 </code></pre></div></div><div class="block card mb-3"><div class="card-header bg-transparent d-flex justify-content-between"><h6 class="mb-0">Focus</h6><div class="show-code" data-module="showcode">show code <i class="mdi mdi-code-tags"></i></div></div><div class="card-body"><p-check focus>Remember me</p-check></div><div class="card-footer pt-0 animated hide"><pre><code class="language-html">
     &lt;p-check focus&gt;Remember me&lt;/p-check&gt;
-</code></pre></div></div><div class="block card mb-3"><div class="card-header bg-transparent d-flex justify-content-between"><h6 class="mb-0">Indeterminate</h6><button class="btn btn-small ml-auto mr-2" data-module="indeterminate">Apply</button><div class="show-code" data-module="showcode">show code <i class="mdi mdi-code-tags"></i></div></div><div class="card-body"><p-check class="p-icon p-curve"><i class="icon mdi mdi-check" slot="extra"></i> Normal <i class="icon mdi mdi-minus" slot="indeterminate-extra"></i><label slot="indeterminate-label">Indeterminate</label></p-check></div><div class="card-footer pt-0 animated hide"><pre><code class="language-html">
-    &lt;p-check class=&quot;p-icon p-curve&quot;&gt;
+</code></pre></div></div><div class="block card mb-3"><div class="card-header bg-transparent d-flex justify-content-between"><h6 class="mb-0">Indeterminate</h6><button class="btn btn-small ml-auto mr-2" @click="set_ind">Apply</button><div class="show-code" data-module="showcode">show code <i class="mdi mdi-code-tags"></i></div></div><div class="card-body"><!--
+        .sync Modifier needs Vue 2.3.0+ (components work fine on Vue 2.2.0+) 
+    --><p-check class="p-icon p-curve" :indeterminate.sync="ind"><i class="icon mdi mdi-check" slot="extra"></i> Normal <i class="icon mdi mdi-minus" slot="indeterminate-extra"></i><label slot="indeterminate-label">Indeterminate</label></p-check></div><div class="card-footer pt-0 animated hide"><pre><code class="language-html">
+    &lt;!--
+        .sync Modifier needs Vue 2.3.0+ (components work fine on Vue 2.2.0+) 
+    --&gt;
+
+    &lt;p-check class=&quot;p-icon p-curve&quot; :indeterminate.sync=&quot;ind&quot;&gt;
         &lt;i class=&quot;icon mdi mdi-check&quot; slot=&quot;extra&quot;&gt;&lt;/i&gt;
         Normal
         &lt;i class=&quot;icon mdi mdi-minus&quot; slot=&quot;indeterminate-extra&quot;&gt;&lt;/i&gt;
@@ -972,6 +978,18 @@
             console.error('[App] Service worker registration failed', err)
           );
       });
-    }</script><!-- UIKITS --><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/prism.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/components/prism-bash.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/components/prism-scss.min.js"></script><script defer="defer" src="//platform.twitter.com/widgets.js" charset="utf-8"></script><script defer="defer" src="https://buttons.github.io/buttons.js"></script><script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script><script>feather.replace()</script><!-- VUE --><script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script><!-- PRETTY CHECKBOX VUE --><script src="https://cdn.jsdelivr.net/npm/pretty-checkbox-vue@1.0.2/dist/pretty-checkbox-vue.min.js"></script><script>Vue.use(PrettyCheckbox);
+    }</script><!-- UIKITS --><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/prism.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/components/prism-bash.min.js"></script><script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/components/prism-scss.min.js"></script><script defer="defer" src="//platform.twitter.com/widgets.js" charset="utf-8"></script><script defer="defer" src="https://buttons.github.io/buttons.js"></script><script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script><script>feather.replace()</script><!-- VUE --><script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script><!-- PRETTY CHECKBOX VUE --><script src="https://cdn.jsdelivr.net/npm/pretty-checkbox-vue@1.1/dist/pretty-checkbox-vue.min.js"></script><script>Vue.use(PrettyCheckbox);
 
-      new Vue({el: '#app'});</script><script src="javascripts/app.js"></script></body></html>
+      new Vue({
+          el: '#app',
+
+          data: {
+              ind: false,
+          },
+
+          methods: {
+              set_ind: function () {
+                  this.ind = true;
+              }
+          }
+      });</script><script src="javascripts/app.js"></script></body></html>
