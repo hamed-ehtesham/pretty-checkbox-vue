@@ -1,5 +1,5 @@
 <script>
-    let prettyInput = require('./PrettyInput.vue');
+    let prettyInput = require('./PrettyInput');
 
     let prettyRadio = {
         name: "pretty-radio",

@@ -1,6 +1,6 @@
-import PrettyInput from './PrettyInput.vue';
-import PrettyCheckbox from './PrettyCheckbox.vue';
-import PrettyRadio from './PrettyRadio.vue';
+import PrettyInput from './PrettyInput';
+import PrettyCheckbox from './PrettyCheckbox';
+import PrettyRadio from './PrettyRadio';
 
 module.exports = {
     install: function (Vue, options) {

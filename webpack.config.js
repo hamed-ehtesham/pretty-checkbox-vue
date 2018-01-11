@@ -1,39 +1,68 @@
-const webpack = require('webpack');
-const merge = require('webpack-merge');
 const path = require('path');
+const merge = require('webpack-merge');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TemplateBannerPlugin = require('template-banner-webpack-plugin');
 
-var config = {
+const babelConfig = {
+    cacheDirectory: true,
+    presets: [
+        ['env', {
+            'modules': false,
+            'targets': {
+                'browsers': ['> 2%'],
+                uglify: true
+            },
+        }]
+    ],
+    plugins: [
+        'transform-object-rest-spread',
+        ['transform-runtime', {
+            'polyfill': false,
+            'helpers': false
+        }]
+    ]
+};
+
+let config = {
     output: {
-        path: path.resolve(__dirname + '/dist/'),
+        path: path.resolve(__dirname + '/dist'),
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel',
-                include: __dirname,
-                exclude: /node_modules/
+                include: path.resolve(__dirname + '/src'),
+                exclude: /node_modules/,
+                use: [{loader: 'babel-loader', options: babelConfig}]
             },
             {
                 test: /\.vue$/,
-                loader: 'vue'
-            },
-            {
-                test: /\.css$/,
-                loader: 'style!less!css'
+                include: path.resolve(__dirname + '/src'),
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        js: {
+                            loader: 'babel-loader', options: babelConfig
+                        }
+                    },
+                    esModule: false
+                }
             }
         ]
     },
-    externals: {},
+    resolve: {
+        extensions: [".js", ".json", ".vue", ".css"],
+    },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin( {
-            minimize : true,
-            sourceMap : false,
-            mangle: true,
-            compress: {
-                warnings: false
-            }
-        } )
+        new UglifyJsPlugin(),
+        new TemplateBannerPlugin({
+            banner: `{name} v{version}
+(c) 2017-{year} {author}
+Released under the {license} License.`,
+            default: {
+                year: (new Date()).getFullYear(),
+            },
+        }),
     ]
 };
 
