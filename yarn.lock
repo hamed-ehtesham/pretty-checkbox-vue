@@ -2804,9 +2804,9 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-template-banner-webpack-plugin@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/template-banner-webpack-plugin/-/template-banner-webpack-plugin-1.0.0.tgz#873fabe68565ddc1501f44ce154d76c7f704615d"
+template-banner-webpack-plugin@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/template-banner-webpack-plugin/-/template-banner-webpack-plugin-1.1.2.tgz#9d448dc72ce2b1a1052abee6a9e7f8cc2e5380f7"
 
 through2@^2.0.0:
   version "2.0.3"

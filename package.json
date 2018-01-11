@@ -49,7 +49,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "template-banner-webpack-plugin": "^1.0.0",
+    "template-banner-webpack-plugin": "^1.1.2",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "vue-loader": "^13.7.0",
     "vue-template-compiler": "^2.5.13",
