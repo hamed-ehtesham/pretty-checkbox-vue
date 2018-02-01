@@ -177,6 +177,8 @@
         mounted() {
             if (this.$vnode.data && !this.$vnode.data.staticClass)
                 this.default_mode = true;
+            if (this.indeterminate)
+                this.$refs.input.indeterminate = true;
         },
 
         methods: {
