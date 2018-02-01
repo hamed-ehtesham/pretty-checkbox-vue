@@ -1,6 +1,6 @@
-import PrettyInput from './PrettyInput';
-import PrettyCheckbox from './PrettyCheckbox';
-import PrettyRadio from './PrettyRadio';
+let PrettyInput = require('./PrettyInput');
+let PrettyCheckbox = require('./PrettyCheckbox');
+let PrettyRadio = require('./PrettyRadio');
 
 module.exports = {
     install: function (Vue, options) {
