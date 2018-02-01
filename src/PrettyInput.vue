@@ -17,7 +17,7 @@
             <slot name="hover-extra"></slot>
             <slot name="hover-label"></slot>
         </div>
-        <div v-if="indeterminate" :class="indeterminateClasses">
+        <div v-if="_indeterminate" :class="indeterminateClasses">
             <slot name="indeterminate-extra"></slot>
             <slot name="indeterminate-label"></slot>
         </div>
@@ -98,6 +98,9 @@
             _required() {
                 return typeof this.required === 'string' ? true : !!this.required;
             },
+            _indeterminate() {
+                return typeof this.indeterminate === 'string' ? true : !!this.indeterminate;
+            },
             _trueValue() {
                 return typeof this.trueValue === 'string' ? this.trueValue : !!this.trueValue;
             },
@@ -120,7 +123,7 @@
                     'p-toggle': this._toggle,
                     'p-has-hover': this._hover,
                     'p-has-focus': this._focus,
-                    'p-has-indeterminate': this.indeterminate,
+                    'p-has-indeterminate': this._indeterminate,
                 };
             },
             onClasses() {
@@ -177,7 +180,7 @@
         mounted() {
             if (this.$vnode.data && !this.$vnode.data.staticClass)
                 this.default_mode = true;
-            if (this.indeterminate)
+            if (this._indeterminate)
                 this.$refs.input.indeterminate = true;
         },
 
