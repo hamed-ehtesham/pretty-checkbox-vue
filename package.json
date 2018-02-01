@@ -14,7 +14,9 @@
     "CSS",
     "Input",
     "Checkbox",
-    "Radio"
+    "Switch",
+    "Radio",
+    "Button"
   ],
   "main": "dist/pretty-checkbox-vue.js",
   "scripts": {
