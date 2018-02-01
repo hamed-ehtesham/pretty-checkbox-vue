@@ -4,6 +4,9 @@
   "description": "Quickly integrate pretty checkbox Components with Vue.js",
   "keywords": [
     "Pretty",
+    "Radio",
+    "Switch",
+    "Button",
     "Pretty Checkbox",
     "pretty-checkbox",
     "Components",
@@ -13,10 +16,7 @@
     "WebComponents",
     "CSS",
     "Input",
-    "Checkbox",
-    "Switch",
-    "Radio",
-    "Button"
+    "Checkbox"
   ],
   "main": "dist/pretty-checkbox-vue.js",
   "scripts": {
