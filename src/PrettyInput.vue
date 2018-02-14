@@ -36,7 +36,7 @@
         props: {
             type: String,
             name: String,
-            value: String,
+            value: {},
             modelValue: {},
             trueValue: {},
             falseValue: {},
