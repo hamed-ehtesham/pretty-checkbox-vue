@@ -4,7 +4,7 @@
 </a>
 
 <br>
-Quickly integrate <a href="https://lokesh-coder.github.io/pretty-checkbox/">pretty checkbox</a> Components with <a href="https://vuejs.org">Vue.js</a>
+Quickly integrate <a href="https://lokesh-coder.github.io/pretty-checkbox/">pretty checkbox</a> Components (checkbox, switch, radio button) with <a href="https://vuejs.org">Vue.js</a>
 <br>
 <br>
 
