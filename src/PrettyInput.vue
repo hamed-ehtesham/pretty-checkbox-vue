@@ -87,7 +87,7 @@
                 }
 
                 // this.modelValue === undefined
-                if(this.m_checked === undefined)
+                if (this.m_checked === undefined)
                     return this.m_checked = typeof this.checked === 'string' ? true : !!this.checked;
                 else
                     return this.m_checked;
@@ -120,6 +120,7 @@
                 return {
                     pretty: true,
                     'p-default': this.default_mode,
+                    'p-round': this._type === 'radio' ? this.default_mode : false,
                     'p-toggle': this._toggle,
                     'p-has-hover': this._hover,
                     'p-has-focus': this._focus,

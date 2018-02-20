@@ -97,7 +97,8 @@ Property | Type | Default Value
 ------------ | ------------- | -------------
 type | String | checkbox (checkbox & input) or radio (radio) 
 name | String | 
-value | String |  
+value | Any | 
+class | String | `p-default` (checkbox & input) or `p-default p-round` (radio) 
 true-value | Boolean or String | true
 false-value | Boolean or String | false
 checked | Boolean | false
