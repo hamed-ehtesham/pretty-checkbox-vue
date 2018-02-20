@@ -1,6 +1,6 @@
 {
   "name": "pretty-checkbox-vue",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Quickly integrate pretty checkbox Components (checkbox, switch, radio button) with Vue.js",
   "keywords": [
     "Pretty",
