@@ -183,6 +183,7 @@
                 this.default_mode = true;
             if (this._indeterminate)
                 this.$refs.input.indeterminate = true;
+            this.$el.setAttribute(`p-${this._type}`, '');
         },
 
         methods: {
